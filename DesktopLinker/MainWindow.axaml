@@ -8,7 +8,6 @@
         Background="#060606"
         Foreground="White">
         
-        
         <StackPanel>
                 <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
                         <Label>Name</Label>
