@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DesktopLinker.MainWindow"
+        Title="DesktopLinker"
+        Background="#060606"
+        Foreground="White">
+        
+        
+        <StackPanel>
+                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                        <Label>Name</Label>
+                        <TextBox Name="InputName" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                </Grid>
+                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                        <Label>Executable Path</Label>
+                        <TextBox Name="InputBinaryPath" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                </Grid>
+                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                        <Label>Icon</Label>
+                        <TextBox Name="InputIcon" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                </Grid>
+                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                        <Label>Arguments</Label>
+                        <TextBox Name="InputArguments" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                </Grid>
+                
+        </StackPanel>
+   
+</Window>
