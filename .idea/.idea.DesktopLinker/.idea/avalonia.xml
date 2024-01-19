@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="DesktopLinker/App.axaml" value="DesktopLinker/DesktopLinker.csproj" />
         <entry key="DesktopLinker/MainWindow.axaml" value="DesktopLinker/DesktopLinker.csproj" />
       </map>
     </option>

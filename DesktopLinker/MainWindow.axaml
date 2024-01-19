@@ -2,7 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+        Width="600" Height="450"
         x:Class="DesktopLinker.MainWindow"
         Title="DesktopLinker"
         Background="#060606"
@@ -11,7 +12,7 @@
         <StackPanel>
                 <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
                         <Label>Name</Label>
-                        <TextBox Name="InputName" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                        <TextBox Name="InputName" Grid.Column="2" Width="350" Background="#080808" ></TextBox>
                 </Grid>
                 <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
                         <Label>Executable Path</Label>
@@ -25,7 +26,7 @@
                         <Label>Arguments</Label>
                         <TextBox Name="InputArguments" Grid.Column="2" Width="350" Background="#080808"></TextBox>
                 </Grid>
-                
+                <Button Name="CreateFileBtn" HorizontalAlignment="Center" Margin="20" Click="CreateFileBtn_OnClick">Create</Button>
         </StackPanel>
-   
+        
 </Window>
