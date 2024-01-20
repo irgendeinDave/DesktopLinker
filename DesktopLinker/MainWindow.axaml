@@ -9,24 +9,36 @@
         Background="#060606"
         Foreground="White">
         
-        <StackPanel>
-                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
-                        <Label>Name</Label>
-                        <TextBox Name="InputName" Grid.Column="2" Width="350" Background="#080808" ></TextBox>
+        <Grid RowDefinitions="Auto, *, Auto">
+                <Grid>
+                        <StackPanel>
+                                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                                        <Label>Name</Label>
+                                        <TextBox Name="InputName" Grid.Column="2" Width="350" Background="#080808" ></TextBox>
+                                </Grid>
+                                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                                        <Label>Executable Path</Label>
+                                        <TextBox Name="InputBinaryPath" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                                </Grid>
+                                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                                        <Label>Icon</Label>
+                                        <TextBox Name="InputIcon" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                                </Grid>
+                                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
+                                        <Label>Arguments</Label>
+                                        <TextBox Name="InputArguments" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                                </Grid>    
+                        </StackPanel>
+                        
                 </Grid>
-                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
-                        <Label>Executable Path</Label>
-                        <TextBox Name="InputBinaryPath" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                
+                <Grid Row="2">
+                        <StackPanel>
+                                <Button Name="CreateFileBtn" HorizontalAlignment="Center" Margin="20" Click="CreateFileBtn_OnClick">Create</Button>
+                                <Label Name="OutputConsole"  HorizontalAlignment="Center"></Label>
+                        </StackPanel>
                 </Grid>
-                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
-                        <Label>Icon</Label>
-                        <TextBox Name="InputIcon" Grid.Column="2" Width="350" Background="#080808"></TextBox>
-                </Grid>
-                <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
-                        <Label>Arguments</Label>
-                        <TextBox Name="InputArguments" Grid.Column="2" Width="350" Background="#080808"></TextBox>
-                </Grid>
-                <Button Name="CreateFileBtn" HorizontalAlignment="Center" Margin="20" Click="CreateFileBtn_OnClick">Create</Button>
-        </StackPanel>
+                
+        </Grid>
         
 </Window>
