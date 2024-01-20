@@ -7,6 +7,11 @@ namespace DesktopLinker;
 
 public partial class MainWindow : Window
 {
+    private string? Name = string.Empty;
+    private string? ExecPath = string.Empty;
+    private string? IconPath = string.Empty;
+    private string? Arguments = string.Empty;
+    
     public MainWindow()
     {
         InitializeComponent();
@@ -14,6 +19,9 @@ public partial class MainWindow : Window
 
     private void CreateFileBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        
+        Name = InputName.Text;
+        ExecPath = InputBinaryPath.Text;
+        IconPath = InputIcon.Text;
+        Arguments = InputArguments.Text;
     }
 }

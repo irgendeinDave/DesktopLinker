@@ -29,7 +29,6 @@
                                         <TextBox Name="InputArguments" Grid.Column="2" Width="350" Background="#080808"></TextBox>
                                 </Grid>    
                         </StackPanel>
-                        
                 </Grid>
                 
                 <Grid Row="2">
