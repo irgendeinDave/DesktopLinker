@@ -3,6 +3,7 @@ using System.IO;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.Media;
 using Avalonia.Platform.Storage;
 
 namespace DesktopLinker;
@@ -64,4 +65,34 @@ public partial class MainWindow : Window
         IconPath = files[0].Path.AbsolutePath;
         InputIcon.Text = IconPath;
     }
+
+    #region Console
+
+    private void ClearConsole()
+    {
+        //OutputConsole.Content = string.Empty;
+    }
+
+    private void ConsoleInfo(string message)
+    {
+        OutputConsoleMessageType.Text = string.Empty;
+        OutputConsoleMessage.Text = message;
+    }
+
+    private void ConsoleWarning(string message)
+    {
+        OutputConsoleMessageType.Text = "Warning:";
+        OutputConsoleMessageType.Foreground = new SolidColorBrush(Colors.Orange);
+        OutputConsoleMessage.Text = message;
+    }
+
+    private void ConsoleError(string message)
+    {
+        OutputConsoleMessageType.Text = "Error:";
+        OutputConsoleMessageType.Foreground = new SolidColorBrush(Colors.Red);
+        OutputConsoleMessage.Text = message;
+    }
+    
+
+    #endregion
 }

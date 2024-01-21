@@ -34,7 +34,10 @@
                 <Grid Row="2">
                         <StackPanel>
                                 <Button Name="CreateFileBtn" HorizontalAlignment="Center" Margin="20" Click="CreateFileBtn_OnClick">Create</Button>
-                                <Label Name="OutputConsole"  HorizontalAlignment="Center"></Label>
+                                <TextBlock HorizontalAlignment="Center" Margin="5">
+                                        <Run Name="OutputConsoleMessageType"></Run>
+                                        <Run Name="OutputConsoleMessage"></Run>
+                                </TextBlock>
                         </StackPanel>
                 </Grid>
                 
