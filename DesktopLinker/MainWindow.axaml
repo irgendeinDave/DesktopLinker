@@ -18,11 +18,11 @@
                                 </Grid>
                                 <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
                                         <Label>Executable Path</Label>
-                                        <TextBox Name="InputBinaryPath" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                                        <TextBox Name="InputBinaryPath" Grid.Column="2" Width="350" Background="#080808" DoubleTapped="InputBinaryPath_OnDoubleTapped"></TextBox>
                                 </Grid>
                                 <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
                                         <Label>Icon</Label>
-                                        <TextBox Name="InputIcon" Grid.Column="2" Width="350" Background="#080808"></TextBox>
+                                        <TextBox Name="InputIcon" Grid.Column="2" Width="350" Background="#080808" DoubleTapped="InputIcon_OnDoubleTapped"></TextBox>
                                 </Grid>
                                 <Grid Height="40" ColumnDefinitions="Auto, *, Auto">
                                         <Label>Arguments</Label>
