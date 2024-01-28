@@ -22,10 +22,29 @@ public partial class MainWindow : Window
 
     private void CreateFileBtn_OnClick(object? sender, RoutedEventArgs e)
     {
+        // get data from input
         Name = InputName.Text;
         ExecPath = InputBinaryPath.Text;
         IconPath = InputIcon.Text;
         Arguments = InputArguments.Text;
+        
+        try
+        {
+            string path = $"{Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)}/{Name}.desktop";
+            using (File.Create(path)) {}
+            using (StreamWriter sw = File.CreateText(path))
+            { 
+                sw.WriteLine("[Desktop Entry]");
+                sw.WriteLine($"Name={Name}");
+                sw.WriteLine($"Exec={ExecPath}");
+                sw.WriteLine($"Icon={IconPath}");
+                sw.WriteLine($"Arguments={Arguments}");
+            }
+        }
+        catch (Exception ex)
+        {
+            ConsoleError(ex.Message);
+        }
     }
 
     private async void InputBinaryPath_OnDoubleTapped(object? sender, TappedEventArgs e)
@@ -67,10 +86,10 @@ public partial class MainWindow : Window
     }
 
     #region Console
-
     private void ClearConsole()
     {
-        //OutputConsole.Content = string.Empty;
+        OutputConsoleMessageType.Text = string.Empty;
+        OutputConsoleMessage.Text = string.Empty;
     }
 
     private void ConsoleInfo(string message)
@@ -92,7 +111,5 @@ public partial class MainWindow : Window
         OutputConsoleMessageType.Foreground = new SolidColorBrush(Colors.Red);
         OutputConsoleMessage.Text = message;
     }
-    
-
     #endregion
 }
